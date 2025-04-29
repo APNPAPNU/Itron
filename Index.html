@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>YouTube Whisper Transcriber</title>
+</head>
+<body>
+    <h1>YouTube Transcriber</h1>
+    <form method="POST">
+        <label for="video_url">Enter YouTube URL:</label><br>
+        <input type="text" name="video_url" id="video_url" placeholder="https://www.youtube.com/watch?v=..." required>
+        <button type="submit">Transcribe</button>
+    </form>
+
+    {% if transcript %}
+        <h2>Transcript:</h2>
+        <pre>{{ transcript }}</pre>
+        {% if download_link %}
+            <a href="/download/{{ download_link }}">Download Transcript</a>
+        {% endif %}
+    {% endif %}
+</body>
+</html>
