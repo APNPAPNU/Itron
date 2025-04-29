@@ -4,3 +4,4 @@ git+https://github.com/openai/whisper.git
 torch
 setuptools
 wheel
+gunicorn
